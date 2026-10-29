@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nhqm-ssl-monitor"
+version = "1.0.0"
+description = "Lightweight Python TLS certificate validation and expiry monitoring"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "NHQM"}]
+keywords = ["ssl", "tls", "certificate", "monitor", "expiry", "security"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Security",
+]
+
+[project.scripts]
+nhqm-ssl = "nhqm_ssl_monitor.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
